@@ -1,9 +1,11 @@
-import './App.css';
+import Header from './Components/Header'
+import Animation from './Components/BackgroundAnimation'
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <Header />
+      <Animation />
     </div>
   );
 }
