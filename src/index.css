@@ -1,28 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 :root {
-  --lightpurple: #584895;
-  --lightblue: #00adee;
-  --darkgrey: #1a1a1a;
-  --lightgrey: #363636;
+  	--lightpurple: #584895;
+  	--lightblue: #00adee;
+  	--darkgrey: #1a1a1a;
+  	--lightgrey: #363636;
+	--text: #f0f0f0;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  position: absolute;
-  width: 100%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	position: absolute;
+	width: 100%;
 }
 
 body {
-  background-color: var(--darkgrey);
-  min-height: 100vh;
-  color: white;
-  font-family: montserrat;
-  font-weight: regular;
+	background-color: var(--darkgrey);
+	min-height: 100vh;
+	color: var(--text);
+	font-size: 20px;
+	font-family: montserrat;
+	font-weight: regular;
+}
+
+/*===========================================Navigation==============================================*/
+
+#Navigation a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+#Navigation li{
+	list-style: none;
+}
+
+#Navigation {
+	display: flex;
+	width: 75vw;
+	align-items: center;
+	margin: auto;
+	padding-top: 20px;
+}
+
+#Navigation-Logo > img {
+	height: 70px;
+}
+
+#Navigation-Links {
+	display: flex;
+}
+
+#Navigation-Socials{
+	
 }

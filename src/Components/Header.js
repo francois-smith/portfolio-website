@@ -8,23 +8,42 @@ const Header = () => {
     return (
         <nav id="Navigation">
             <div id="Navigation-Logo">
-                <img src={logo} rel="Main Logo"/>
+                <img src={logo} alt="Main Logo"/>
             </div>
             <div id="Navigation-Links">
-                <li>Projects</li>
-                <li>Technologies</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li>
+                    <a href='#'>
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        Technologies
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        Contact
+                    </a>
+                </li>
             </div>
             <div id='Navigation-Socials'>
-                <a href=''>
-                    <AiFillInstagram></AiFillInstagram>
-                </a>
                 <a href='https://github.com/francois-smith'>
                     <AiFillGithub></AiFillGithub>
+                    Github
                 </a>
                 <a href=''>
+                    <AiFillInstagram></AiFillInstagram>
+                    Instagram
+                </a>
+                <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
                     <AiFillLinkedin></AiFillLinkedin>
+                    LinkedIn
                 </a>
             </div>
         </nav>
