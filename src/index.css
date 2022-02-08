@@ -42,6 +42,8 @@ body {
 
 #Navigation {
 	display: flex;
+	position: fixed;
+	justify-content: space-around;
 	width: 75vw;
 	align-items: center;
 	margin: auto;

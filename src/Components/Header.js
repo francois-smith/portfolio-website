@@ -34,16 +34,16 @@ const Header = () => {
             </div>
             <div id='Navigation-Socials'>
                 <a href='https://github.com/francois-smith'>
-                    <AiFillGithub></AiFillGithub>
                     Github
+                    <AiFillGithub></AiFillGithub>
                 </a>
-                <a href=''>
-                    <AiFillInstagram></AiFillInstagram>
+                <a href='https://instagram.com/_francois.smith_'>
                     Instagram
+                    <AiFillInstagram></AiFillInstagram>              
                 </a>
                 <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
-                    <AiFillLinkedin></AiFillLinkedin>
                     LinkedIn
+                    <AiFillLinkedin></AiFillLinkedin>
                 </a>
             </div>
         </nav>
