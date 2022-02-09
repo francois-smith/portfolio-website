@@ -7,27 +7,25 @@ const Header = () => {
 
     return (
         <nav id="Navigation">
-            <div id="Navigation-Logo">
-                <img src={logo} alt="Main Logo"/>
-            </div>
             <div id="Navigation-Links">
+                <a href='/'><img src={logo} alt="Main Logo"/></a>
                 <li>
-                    <a href='#'>
+                    <a href='#ProjectsHeader'>
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href='#'>
+                    <a href='#TechnologiesHeader'>
                         Technologies
                     </a>
                 </li>
                 <li>
-                    <a href='#'>
+                    <a href='#AboutHeader'>
                         About
                     </a>
                 </li>
                 <li>
-                    <a href='#'>
+                    <a href='#ContactHeader'>
                         Contact
                     </a>
                 </li>
@@ -35,15 +33,15 @@ const Header = () => {
             <div id='Navigation-Socials'>
                 <a href='https://github.com/francois-smith'>
                     Github
-                    <AiFillGithub></AiFillGithub>
+                    <AiFillGithub className='svg_icon'></AiFillGithub>
                 </a>
                 <a href='https://instagram.com/_francois.smith_'>
                     Instagram
-                    <AiFillInstagram></AiFillInstagram>              
+                    <AiFillInstagram className='svg_icon'></AiFillInstagram>              
                 </a>
                 <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
                     LinkedIn
-                    <AiFillLinkedin></AiFillLinkedin>
+                    <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
                 </a>
             </div>
         </nav>

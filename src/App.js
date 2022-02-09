@@ -1,10 +1,10 @@
-import Header from './Components/Header'
+import Navigation from './Components/Navigation'
 import Animation from './Components/BackgroundAnimation'
 
 function App() {
   return (
     <div>
-      <Header />
+      <Navigation />
       <Animation />
     </div>
   );

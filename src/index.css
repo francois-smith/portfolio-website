@@ -43,21 +43,32 @@ body {
 #Navigation {
 	display: flex;
 	position: fixed;
-	justify-content: space-around;
-	width: 75vw;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 200px;
+	padding-right: 200px;
 	align-items: center;
-	margin: auto;
 	padding-top: 20px;
 }
 
-#Navigation-Logo > img {
-	height: 70px;
+#Navigation img {
+	height: 100px;
 }
 
 #Navigation-Links {
 	display: flex;
+	align-items: center;
+}
+
+#Navigation-Links li {
+	padding-left: 40px;
 }
 
 #Navigation-Socials{
+	align-items: center;
 	
+}
+
+.svg_icon {
+	transform: scale(2);
 }
