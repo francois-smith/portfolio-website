@@ -32,15 +32,15 @@ const Header = () => {
             </div>
             <div id='Navigation-Socials'>
                 <a href='https://github.com/francois-smith'>
-                    Github
+                    <span class="Social-Text">Github</span>
                     <AiFillGithub className='svg_icon'></AiFillGithub>
                 </a>
                 <a href='https://instagram.com/_francois.smith_'>
-                    Instagram
+                    <span class="Social-Text">Instagram</span>
                     <AiFillInstagram className='svg_icon'></AiFillInstagram>              
                 </a>
                 <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
-                    LinkedIn
+                    <span class="Social-Text">LinkedIn</span>
                     <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
                 </a>
             </div>

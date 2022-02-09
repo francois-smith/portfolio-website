@@ -1,11 +1,13 @@
 import Navigation from './Components/Navigation'
-import Animation from './Components/BackgroundAnimation'
+import Hero from './Components/Hero'
+import Project from './Components/Projects'
 
 function App() {
   return (
     <div>
       <Navigation />
-      <Animation />
+      <Hero />
+      <Project />
     </div>
   );
 }

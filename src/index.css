@@ -2,8 +2,8 @@
 :root {
   	--lightpurple: #584895;
   	--lightblue: #00adee;
-  	--darkgrey: #1a1a1a;
-  	--lightgrey: #363636;
+  	--darkgrey: #0D0D0D;
+  	--lightgrey: #171717;
 	--text: #f0f0f0;
 }
 
@@ -21,7 +21,7 @@ html {
 }
 
 body {
-	background-color: var(--darkgrey);
+	background-color: var(--lightgrey);
 	min-height: 100vh;
 	color: var(--text);
 	font-size: 20px;
@@ -42,7 +42,6 @@ body {
 
 #Navigation {
 	display: flex;
-	position: fixed;
 	justify-content: space-between;
 	width: 100%;
 	padding-left: 200px;
@@ -66,9 +65,39 @@ body {
 
 #Navigation-Socials{
 	align-items: center;
-	
+	display: flex;
+}
+
+.Social-Text {
+	padding-right: 15px;
+	padding-left: 40px;
 }
 
 .svg_icon {
-	transform: scale(2);
+	padding-top: 2px;
+	transform: scale(2.5);
+}
+
+/*========================================Hero Section ======================================*/
+
+#Hero-Section {
+	height: 88vh;
+}
+
+#Background-Animation {
+	top: 100vh - 800px;
+}
+
+#Background-Animation svg {
+	height: 800px;
+	position: absolute;
+	bottom: 100vh;
+	right: 150px;
+}
+
+/*========================================Project Section ======================================*/
+
+#ProjectSection {
+	background-color: var(--darkgrey);
+	height: 100vh;
 }
