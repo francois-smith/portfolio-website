@@ -1,31 +1,29 @@
-import React, {useState} from 'react';
+import React from 'react';
 import logo from '../Media/Images/Logo-Main.png'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Header = () => {
-    const [showLinks, setShowLinks] = useState(false);
-
     return (
         <nav id="Navigation">
             <div id="Navigation-Links">
                 <a href='/'><img src={logo} alt="Main Logo"/></a>
                 <li>
-                    <a href='#ProjectsHeader'>
+                    <a href='#ProjectsSection'>
                         Projects
                     </a>
                 </li>
                 <li>
-                    <a href='#TechnologiesHeader'>
+                    <a href='#TechnologiesSection'>
                         Technologies
                     </a>
                 </li>
                 <li>
-                    <a href='#AboutHeader'>
+                    <a href='#AboutSection'>
                         About
                     </a>
                 </li>
                 <li>
-                    <a href='#ContactHeader'>
+                    <a href='#ContactSection'>
                         Contact
                     </a>
                 </li>

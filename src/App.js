@@ -1,6 +1,8 @@
 import Navigation from './Components/Navigation'
 import Hero from './Components/Hero'
 import Project from './Components/Projects'
+import Technologies from './Components/Technologies'
+import About from './Components/About'
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Navigation />
       <Hero />
       <Project />
+      <Technologies />
+      <About />
     </div>
   );
 }
