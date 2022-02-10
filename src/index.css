@@ -81,23 +81,153 @@ body {
 /*========================================Hero Section ======================================*/
 
 #Hero-Section {
-	height: 88vh;
+	height: 80vh;
 }
 
-#Background-Animation {
+#Hero-Section #Background-Animation {
 	top: 100vh - 800px;
 }
 
-#Background-Animation svg {
+#Hero-Section #Background-Animation svg {
 	height: 800px;
 	position: absolute;
 	bottom: 100vh;
 	right: 150px;
 }
 
-/*========================================Project Section ======================================*/
+#Hero-Section #Info {
+	padding-left: 250px;
+	padding-top: 25vh;
+	margin-right: auto;
+	font-family: Raleway, sans-serif;
+}
+
+#Hero-Section #Info #Welcome {
+	font-weight: bold;
+	font-size: 40px;
+	padding-bottom: 40px;
+} 
+
+#Hero-Section #Info #Name {
+	font-weight: bold;
+	font-size: 80px;
+} 
+
+#Hero-Section #Info #Dev {
+	font-weight: bolder;
+	font-size: 25px;
+	color: #929292;
+	margin-top: -10px;
+	margin-left: 5px;
+}
+
+/*======================================== Project Section ======================================*/
 
 #ProjectSection {
 	background-color: var(--darkgrey);
 	height: 100vh;
 }
+
+#Cards {
+	display: table;
+	column-count: 3;
+	padding-left: 5vw;
+}
+
+.Card {
+	overflow: hidden;
+	z-index: 1;
+}
+
+.Card_Body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 30vw;
+	height: 35vh;
+	z-index: 1;
+}
+
+.Card_Type {
+	padding-top: 20px;
+	font-family: Montserrat;
+	font-weight: normal;
+	font-size: 22px;
+	z-index: 1;
+}
+
+.Card_Type::after {
+	content: "";
+	margin-top: 3px;
+	float: left;
+	background: linear-gradient(to right, var(--lightblue), var(--lightpurple));
+	width: 100%;
+	height: 5px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.Card_Description {
+	text-align: center;
+	padding-top: 25px;
+	word-wrap: break-word;
+	width: 75%;
+	z-index: 1;
+}
+
+.Card_Btn {
+	position: absolute;
+	bottom: 40px;
+	left: 40%;
+	display: inline-block;
+	padding: 2px;
+	background: linear-gradient(to right, var(--lightblue), var(--lightpurple));
+	border-radius: 20px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.Card_Btn > span {
+	display: inline-block;
+	padding: 0 15px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 18px;
+	z-index: 1;
+}
+
+.Card_Image {
+	position: absolute;
+	width: 100%;
+	z-index: 0;
+}
+
+/*======================================== General Classes ======================================*/
+
+.Text-Gradient {
+	background: linear-gradient(to right, var(--lightblue), var(--lightpurple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.Section_Heading {
+	padding-left: 125px;
+	padding-top: 50px;
+	display: inline-block;
+	font-size: 40px;
+	line-height: 128%;
+	letter-spacing: 0.22em;
+}
+
+.Section_Heading::before {
+	content: "";
+	margin-bottom: 15px;
+	float: left;
+	background: linear-gradient(to right, var(--lightblue), var(--lightpurple));
+	width: 35%;
+	height: 8px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
