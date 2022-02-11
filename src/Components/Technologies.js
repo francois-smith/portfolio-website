@@ -18,7 +18,7 @@ const Technologies = () => {
                         <p className='TechName'>JAVASCRIPT</p>
                     </div>
                     <div className='TechCard'>
-                        <img src={Cpp}></img>
+                        <img src={Cpp} alt=''></img>
                         <p className='TechName'>C++</p>
                     </div>
                     <div className='TechCard'>
@@ -137,7 +137,7 @@ const Technologies = () => {
                             </defs>
                         </svg>
 
-                        <p className='TechName'>MARDOWN</p>
+                        <p className='TechName'>MARKDOWN</p>
                     </div>
                 </div>
             </div>

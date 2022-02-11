@@ -138,7 +138,8 @@ body {
 .Card {
 	overflow: hidden;
 	z-index: 1;
-	padding: 10px 5px;
+	margin: 15px;
+	padding: 15px;
 }
 
 .Card_Body {
@@ -146,7 +147,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 30vw;
+	width: 28vw;
 	height: 35vh;
 	z-index: 1;
 }
@@ -176,7 +177,17 @@ body {
 	word-wrap: break-word;
 	width: 75%;
 	z-index: 1;
+	opacity: 0%;
+	transform: translateY(150px);
+	transition: all 500ms;
+	text-shadow: 2px 2px #ff00000;
 }
+
+.Card:hover .Card_Description{
+	transform: translateY(0px);
+	opacity: 100%;
+}
+
 
 .Card_Btn {
 	position: absolute;
@@ -188,6 +199,12 @@ body {
 	border-radius: 20px;
 	cursor: pointer;
 	z-index: 1;
+	opacity: 0%;
+	transition: opacity 1000ms;
+}
+
+.Card:hover .Card_Btn {
+	opacity: 100%;
 }
 
 .Card_Btn > span {
@@ -197,12 +214,14 @@ body {
 	line-height: 40px;
 	border-radius: 18px;
 	z-index: 1;
+	color: white;
 }
 
 .Card_Image {
 	position: absolute;
 	width: 100%;
 	z-index: 0;
+	border-radius: 20px;
 }
 
 #Project_Footer {
