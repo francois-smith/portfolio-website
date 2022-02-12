@@ -1,10 +1,11 @@
 import React from 'react';
-import BackgroundAnimation from './BackgroundAnimation';
+import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
+import { HeroSection, HeroInfo} from './HeroStyled';
 
 const Hero = () => {
     return (
-       <div id="Hero-Section">
-           <div id="Info">
+       <HeroSection>
+           <HeroInfo>
                 <p id='Welcome'>
                     <span>Hi, my name is</span>
                 </p>
@@ -14,9 +15,9 @@ const Hero = () => {
                 <p id='Dev'>
                     <span>Web Developer / UI Designer</span>
                 </p>
-           </div>
+           </HeroInfo>
            <BackgroundAnimation/>
-       </div>
+       </HeroSection>
     );
 };
 
