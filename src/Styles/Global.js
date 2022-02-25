@@ -57,31 +57,6 @@ const GlobalStyles = createGlobalStyle`
         margin-left:auto;
         margin-right:auto;
     }
-    .Btn {
-        position: absolute;
-        bottom: 40px;
-        left: 40%;
-        display: inline-block;
-        padding: 2px;
-        background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
-        border-radius: 20px;
-        cursor: pointer;
-        z-index: 1;
-        opacity: 0%;
-        transition: opacity 1000ms;
-    }
-    .Card:hover .Btn {
-        opacity: 100%;
-    }
-    .Btn > span {
-        display: inline-block;
-        padding: 0 15px;
-        height: 40px;
-        line-height: 40px;
-        border-radius: 18px;
-        z-index: 1;
-        color: white;
-    }
 `;
 
 export default GlobalStyles;

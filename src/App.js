@@ -5,6 +5,7 @@ import Project from './Components/Projects/Projects'
 import Technologies from './Components/Technologies/Technologies'
 import About from './Components/About/About'
 import Contact from './Components/Contact/Contact'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Technologies />
       <About />
       <Contact />
+      <Footer/>
     </Theme>
   );
 }

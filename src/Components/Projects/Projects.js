@@ -7,7 +7,7 @@ import { CardsContainer } from '../Card/CardStyles';
 const Projects = () => {
 
     return (
-        <ProjectSection> 
+        <ProjectSection id='ProjectsSection'> 
             <h2 class='Section_Heading'>PROJECTS</h2>
             <CardsContainer>
                 <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwaaaaaaaaaaadddddddd' Download='https://Google.com'/>
@@ -16,6 +16,7 @@ const Projects = () => {
                 <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwadadaaaaaaaaaaaaaaaaaadddddddd' Download='https://Google.com'/>
                 <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwadadaaaaaaaaaaaaaaaaaadddddddd' Download='https://Google.com'/>
                 <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwadadaaaaaaadddddddd' Download='https://Google.com'/>
+                <Card Type='DESIGNED'Img={Placeholder} Description='Yeet' Download='https://Google.com'/>
             </CardsContainer>
             <p id="Project_Footer">And many more to come!</p>
         </ProjectSection>

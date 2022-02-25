@@ -1,48 +1,48 @@
 import React from 'react';
 import logo from '../../Media/Images/Logo-Main.png'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import {NavigationContainer, NavigationLinks, NavigationSocials} from './NavigationStyles'
+import {Link, NavigationContainer, NavigationLinks, NavigationSocials, Social} from './NavigationStyles'
 
 const Header = () => {
     return (
         <nav>
-            <NavigationContainer>
+            <NavigationContainer id="PageTop">
                 <NavigationLinks>
                     <a href='/'><img src={logo} alt="Main Logo"/></a>
-                    <li>
-                        <a href='#ProjectsSection'>
+                    <li className="first">
+                        <Link href='#ProjectsSection'>
                             Projects
-                        </a>
+                        </Link>
                     </li>
-                    <li>
-                        <a href='#TechnologiesSection'>
+                    <li className="second">
+                        <Link href='#TechnologiesSection'>
                             Technologies
-                        </a>
+                        </Link>
                     </li>
-                    <li>
-                        <a href='#AboutSection'>
+                    <li className="third">
+                        <Link href='#AboutSection'>
                             About
-                        </a>
+                        </Link>
                     </li>
-                    <li>
-                        <a href='#ContactSection'>
+                    <li className="fourth">
+                        <Link href='#ContactSection'>
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </NavigationLinks>
                 <NavigationSocials>
-                    <a href='https://github.com/francois-smith'>
+                    <Social href='https://github.com/francois-smith' className="third">
                         <span class="Social-Text">Github</span>
                         <AiFillGithub className='svg_icon'></AiFillGithub>
-                    </a>
-                    <a href='https://instagram.com/_francois.smith_'>
+                    </Social>
+                    <Social href='https://instagram.com/_francois.smith_' className="second">
                         <span class="Social-Text">Instagram</span>
                         <AiFillInstagram className='svg_icon'></AiFillInstagram>              
-                    </a>
-                    <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
+                    </Social>
+                    <Social href='https://www.linkedin.com/in/francois-smith-b02609210/' className="first">
                         <span class="Social-Text">LinkedIn</span>
                         <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
-                    </a>
+                    </Social>
                 </NavigationSocials>
             </NavigationContainer>
         </nav>

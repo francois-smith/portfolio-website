@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animation } from './BackgroundAnimationStyle';
+import { Animation } from './BackgroundAnimationStyles';
 
 const BackgroundAnimation = () => (
   <Animation>

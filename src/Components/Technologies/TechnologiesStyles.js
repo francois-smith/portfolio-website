@@ -6,8 +6,9 @@ export const TechnologiesSection = styled.div`
 
     .TechName{
         font-family: ${props => props.theme.fonts.main};
-        font-size: 24px;
+        font-size: 20px;
     }
+
 `;
 
 export const TechSectionHeader = styled.p`
@@ -20,24 +21,30 @@ export const TechSectionHeader = styled.p`
 `;
 
 export const TechSection = styled.div`
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    position: relative;
+
 `;
 
 export const TechCardsContainer = styled.div`
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 10px;
 `;
 
 export const TechCard = styled.div`
     text-align: center;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 45px;
+    padding-left: 45px;
 
     svg {
-        margin-bottom: 15px;
+        transform: scale(0.75);
+        margin-left: 20px;
+        margin-right: 20px;
     }
     img {
-        margin-bottom: 15px;
+        transform: scale(0.75);
+        padding-left: 20px;
+        padding-right: 20px;
     }
 `;

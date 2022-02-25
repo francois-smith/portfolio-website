@@ -3,7 +3,7 @@ import { AboutParagraph, AboutSection } from './AboutStyles';
 
 const Card = () => {
     return (
-       <AboutSection>
+       <AboutSection id='AboutSection'>
             <h2 class='Section_Heading'>ABOUT ME</h2>
             <AboutParagraph>  
                 I am a developer based in South Africa. I have had a passion for all forms of coding since my very first 
