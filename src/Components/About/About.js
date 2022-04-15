@@ -1,5 +1,8 @@
 import React from 'react';
-import { AboutParagraph, AboutSection } from './AboutStyles';
+import Mainteneance from '../../Media/Images/Maintenance.png';
+import Design from '../../Media/Images/Design.png';
+import Development from '../../Media/Images/Development.png';
+import { AboutParagraph, AboutSection, AboutCard, AboutCards, AboutCardTitle, AboutCardDescription} from './AboutStyles';
 
 const Card = () => {
     return (
@@ -30,6 +33,35 @@ const Card = () => {
                     </linearGradient>
                 </defs>
             </svg>
+            <AboutCards>
+                <AboutCard>
+                    <AboutCardTitle>
+                        <img src={Design}></img>
+                        <h3>DESIGN</h3>
+                    </AboutCardTitle>
+                    <AboutCardDescription>
+                        I can design the site from scratch within figma according to your desires and needs. I can also design custom logos and vectors.
+                    </AboutCardDescription>
+                </AboutCard>
+                <AboutCard>
+                    <AboutCardTitle>
+                        <img src={Development}></img>
+                        <h3>DEVELOPMENT</h3>
+                    </AboutCardTitle>
+                    <AboutCardDescription>
+                        I can develop the website using HTML, CSS, JavaScrip and Angular/React. The code will be hand written by me, no templates.
+                    </AboutCardDescription>
+                </AboutCard>
+                <AboutCard>
+                    <AboutCardTitle>
+                        <img src={Mainteneance}></img>
+                        <h3>MAINTENANCE</h3>
+                    </AboutCardTitle>
+                    <AboutCardDescription>
+                        I will setup the initial hosting and uploading of your website, as well as the required updates based on the project.
+                    </AboutCardDescription>
+                </AboutCard>
+            </AboutCards>
        </AboutSection>
     );
 };
