@@ -11,7 +11,7 @@ export const CardsContainer = styled.div`
         z-index: 1;
         margin: 10px;
         padding: 0px 15px;
-
+        transition: all 0.5s;
     }
 
     .Card_Type::after{
@@ -59,7 +59,10 @@ export const CardsContainer = styled.div`
     .Card:hover .Card_Description{
         transform: translateY(0px);
         opacity: 100%;
+    }
 
+    .Card:hover{
+        transform: scale(1.03);
     }
 
     .Card_Image {
@@ -72,14 +75,15 @@ export const CardsContainer = styled.div`
     .Btn {
         position: absolute;
         bottom: 40px;
-        left: 40%;
+        left: 50%;
+        transform: translateX(-50%);
         display: inline-block;
         padding: 2px;
         background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
         border-radius: 20px;
         z-index: 1;
         opacity: 0%;
-        transition: opacity 600ms;
+        transition: opacity 400ms;
     }
 
     .Card:hover .Btn {
