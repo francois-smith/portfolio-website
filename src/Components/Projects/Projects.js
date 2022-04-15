@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
-import Placeholder from '../../Media/Images/PlaceHolder.png'
+import ProjectThumbnail from '../../Media/Images/ProjectThumbnail.png'
+import INLThumbnail from '../../Media/Images/INLThumbnail.png'
 import { ProjectSection } from './ProjectsStyles';
 import { CardsContainer } from '../Card/CardStyles';
 
@@ -10,13 +11,8 @@ const Projects = () => {
         <ProjectSection id='ProjectsSection'> 
             <h2 class='Section_Heading'>PROJECTS</h2>
             <CardsContainer>
-                <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwaaaaaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwaaaaaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED & CODED'Img={Placeholder} Description='waddddwwwwwwwwwwwwwwwwwwadadaaaaaaaaaaaaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwadadaaaaaaaaaaaaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwadadaaaaaaaaaaaaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED'Img={Placeholder} Description='waddddddddddwadwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwadadaaaaaaadddddddd' Download='https://Google.com'/>
-                <Card Type='DESIGNED'Img={Placeholder} Description='Yeet' Download='https://Google.com'/>
+                <Card Type='DESIGNED & CODED' Img={ProjectThumbnail} Description='You can download the code and files for this website using the button below' Download='https://github.com/francois-smith/portfolio-website'/>
+                <Card Type='CODED' Img={INLThumbnail} Description='Website designed by a group of multimedia students for our module INL 120' Download='https://github.com/Multimedia-Overachievers/INL120'/>
             </CardsContainer>
             <p id="Project_Footer">And many more to come!</p>
         </ProjectSection>
