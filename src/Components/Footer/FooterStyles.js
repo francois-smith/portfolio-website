@@ -25,6 +25,10 @@ export const FooterSocials = styled.div`
         margin: 15px;
         transform: scale(1.6);
     }
+
+    .svg_icon:hover{
+        color: ${props => props.theme.colors.primary};
+    }
 `;
 
 export const FooterToTop = styled.div`
@@ -38,10 +42,15 @@ export const FooterToTop = styled.div`
     align-items: center;
 
     svg {
-        margin-top: -5px
+        margin-top: -5px;
+        transition: all 0.3s;
     }
 
     p {
         padding-top: 15px;
+    }
+
+    a:hover svg{
+        transform: translateY(-10px);
     }
 `;
