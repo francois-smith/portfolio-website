@@ -36,15 +36,22 @@ export const TechCard = styled.div`
     text-align: center;
     padding-right: 45px;
     padding-left: 45px;
+    transition: all 0.2s;
 
     svg {
         transform: scale(0.75);
         margin-left: 20px;
         margin-right: 20px;
+        transition: all 0.4s;
     }
     img {
         transform: scale(0.75);
         padding-left: 20px;
         padding-right: 20px;
+        transition: all 0.2s;
+    }
+
+    &:hover{
+        transform: translateY(10px);
     }
 `;
