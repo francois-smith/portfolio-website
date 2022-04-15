@@ -55,13 +55,16 @@ export const ContactForm = styled.form`
 `;
 
 export const InputType = styled.input`
+    position: relative;
     font-size: 18px;
     border: 0;
     padding: 5px;
     margin-right: 20px;
     border-bottom: 2px solid #666;
-    background-color: ${props => props.theme.colors.background2};
+    background-color: rgba(0,0,0,0);
     color: ${props => props.theme.colors.text};
+    font-weight: 300;
+    z-index: 1;
 `;
 
 export const FormMessage = styled.textarea`
@@ -73,6 +76,8 @@ export const FormMessage = styled.textarea`
     background-color: ${props => props.theme.colors.background2};
     width: 100%;
     color: ${props => props.theme.colors.text};
+    z-index: 1;
+    font-weight: 300;
 `;
 
 export const FormButton = styled.input`
@@ -83,8 +88,12 @@ export const FormButton = styled.input`
     border-radius: 6px;
     color: ${props => props.theme.colors.text};
     border: none;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 60px;
+
+    &:hover{
+        filter: brightness(0.8);
+    }
 `;
 
 export const FormInputsContainer = styled.div`
@@ -96,7 +105,19 @@ export const FormInput = styled.div`
 
     span {
         position: absolute;
-        display: inline-block;
+        z-index: 0;
+        left: 0;
+        transition: all 0.15s;
+
+    }
+
+    &:after{
+        content: attr(error-value);
+        position: absolute;
+        left: 0;
+        top: 102%;
+        color: #ff3333;
+        font-size: 18px;
     }
 
     @media ${props => props.theme.breakpoints.sm} {
