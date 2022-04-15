@@ -8,6 +8,7 @@ export const ProjectSection = styled.div`
         text-align: center;
         font-size: 24px;
         padding-bottom: 40px;
+        padding-top: 20px;
     }
 `;
 
