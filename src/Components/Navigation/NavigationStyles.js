@@ -76,8 +76,8 @@ export const Link = styled.a`
         color: #666;
 
         &::after, &::before {
-        width: 100%;
-        left: 0;
+            width: 100%;
+            left: 0;
         }
     }
 
