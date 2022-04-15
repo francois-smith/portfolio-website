@@ -5,6 +5,10 @@ export const CardsContainer = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 
+    .Card:hover .Card_Image{
+        filter: brightness(0.5);
+    }
+
     .Card {
         position: relative;
         overflow: hidden;
@@ -34,11 +38,12 @@ export const CardsContainer = styled.div`
         width: 500px;
         height: 320px;
         z-index: 1;
+        overflow: hidden;
+        border-radius: 10px;
     }
     
     .Card_Type {
         padding-top: 20px;
-        padding-left: 15px;
         font-family: ${props => props.theme.fonts.main};
         font-weight: normal;
         font-size: 22px;
@@ -67,9 +72,8 @@ export const CardsContainer = styled.div`
 
     .Card_Image {
         position: absolute;
-        width: 100%;
+        height: 100%;
         z-index: 0;
-        border-radius: 10px;
     }
 
     .Btn {
@@ -84,6 +88,10 @@ export const CardsContainer = styled.div`
         z-index: 1;
         opacity: 0%;
         transition: opacity 400ms;
+
+        &:hover{
+            filter: brightness(0.8);
+        }
     }
 
     .Card:hover .Btn {
