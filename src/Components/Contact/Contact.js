@@ -2,6 +2,82 @@ import React from 'react';
 import { ContactSection, ContactHeader, ContactContainer, ContactDetails, ContactType, ContactForm, FormMessage, FormButton,  InputType, FormInputsContainer, FormInput } from './contactStyles';
 
 const Contact = () => {
+    function select(e){
+        let tag = e.target.parentElement.querySelector("span");
+        tag.style = "transform: translateY(-28px)"
+    }
+
+    function unSelect(e){
+        let element = e.target;
+        let tag = e.target.parentElement.querySelector("span");
+
+        if(element.value == ""){
+            tag.style = "transform: translateY(0px)"
+            return;
+        }
+
+        switch(tag.innerHTML){
+            case"Name":
+                validateName(e.target);
+                break;
+
+            case"Email":
+            validateEmail(e.target);
+                break;
+
+            case"Number":
+            validateNumber(e.target);
+                break;
+
+            case"Message":
+            validateMessage(e.target);
+                break;
+        }
+    }
+
+    function validateName(e){
+        let name = e.value;
+        let namePattern = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
+        if(!namePattern.test(name)){
+            e.parentElement.setAttribute('error-value', "Invalid name specified");
+        }
+        else{
+            e.parentElement.setAttribute('error-value', "");
+        }
+    }
+
+    function validateEmail(e){
+        let email = e.value;
+        let emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!emailPattern.test(email)){
+            e.parentElement.setAttribute('error-value', "Invalid email specified");
+        }
+        else{
+            e.parentElement.setAttribute('error-value', "");
+        }
+    }
+
+    function validateNumber(e){
+        let number = e.value;
+        let numberPattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        if(!numberPattern.test(number)){
+            e.parentElement.setAttribute('error-value', "Invalid number specified");
+        }
+        else{
+            e.parentElement.setAttribute('error-value', "");
+        }
+    }
+
+    function validateMessage(e){
+        let message = e.value;
+        if(message.length < 20){
+            e.parentElement.setAttribute('error-value', "Message too short");
+        }
+        else{
+            e.parentElement.setAttribute('error-value', "");
+        }
+    }
+
     return (
         <ContactSection id='ContactSection'> 
             <h2 class='Section_Heading'>CONTACT</h2>
@@ -75,24 +151,24 @@ const Contact = () => {
                         </svg>
                     </ContactType>
                 </ContactDetails>
-                <ContactForm>
+                <ContactForm method='post' action='/contactValidate.php'>
                     <FormInputsContainer>
                         <FormInput>
+                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="text" name="name"></InputType>
                             <span>Name</span>
-                            <InputType type="text"></InputType>
                         </FormInput>    
                         <FormInput>
+                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="email" name="email"></InputType>
                             <span>Email</span>
-                            <InputType type="email"></InputType>
                         </FormInput>
                         <FormInput>
+                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="9" maxlength="14" name="phone"></InputType>
                             <span>Number</span>
-                            <InputType type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="9" maxlength="14"></InputType>
                         </FormInput>                   
                     </FormInputsContainer>    
                     <FormInput id='Message'>
+                        <FormMessage onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} maxlength="200" minlength="20"></FormMessage>
                         <span>Message</span>
-                        <FormMessage></FormMessage>
                     </FormInput>       
                     <FormButton type="submit" value='SUBMIT'></FormButton>  
                 </ContactForm>
