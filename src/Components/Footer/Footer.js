@@ -3,6 +3,8 @@ import { FooterSection, FooterSocials, FooterToTop } from './FooterStyles'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
 const Footer = () => {
+    const today = new Date();
+
     return (
         <FooterSection>
             <FooterToTop>
@@ -25,7 +27,7 @@ const Footer = () => {
                     <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
                 </a>
             </FooterSocials>
-            <p id='legal'>@2022 Francois Smith All Rights Reserved.</p>
+            <p id='legal'>@{today.getFullYear()} Francois Smith All Rights Reserved.</p>
         </FooterSection>
     )
 }
