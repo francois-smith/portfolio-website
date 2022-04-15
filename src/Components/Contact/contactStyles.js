@@ -26,7 +26,6 @@ export const ContactContainer = styled.div`
 export const ContactDetails = styled.div`
     display: flex;
     flex-direction: column;
-
 `;
 
 export const ContactType = styled.div`
@@ -36,6 +35,7 @@ export const ContactType = styled.div`
 
     a{
         text-decoration: none;
+        font-style: normal;
         color: ${props => props.theme.colors.text};
     }
 
