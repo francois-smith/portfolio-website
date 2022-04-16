@@ -9,7 +9,7 @@ const Card = (props) => {
 				<p className='Card_Description'>{props.Description}</p>
 				<a href={props.Download} className='Btn' target="_blank">
 					<span>
-						Download
+						{props.DownloadText}
 					</span>
 				</a>
 			</div>
