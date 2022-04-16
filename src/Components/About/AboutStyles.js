@@ -24,11 +24,17 @@ export const AboutCards = styled.div`
 export const AboutCard = styled.div`
     flex-basis: 35%;
     margin: 25px;
+    transition: all 10s;
+
+    &:hover div{
+        transform: translateY(-10px);
+    }
 `;
 
 export const AboutCardTitle = styled.div`
     display: flex;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 
     h3{
         letter-spacing: 0.15em;
@@ -36,8 +42,9 @@ export const AboutCardTitle = styled.div`
         font-weight: 600;
         transform: translateX(-20px);
     }
-    svg{
+    img{
         background-blend-mode: luminosity;
+        transition: all 0.3s;
     }
 `;
 
@@ -46,5 +53,5 @@ export const AboutCardDescription = styled.p`
     font-weight: 300;
     font-size: 18px;
     padding-left: 40px;
-    padding-top: 15px;
+    padding-top: 10px;
 `;
