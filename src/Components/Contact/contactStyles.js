@@ -3,6 +3,15 @@ import styled from "styled-components";
 export const ContactSection = styled.div`
     background-color:  ${props => props.theme.colors.background2};
     height: auto;
+
+    .success{
+        display: none;
+        visibility: hidden;
+    }
+    #invisible{
+        display: none;
+        visibility: hidden;
+    }
 `;
 
 export const ContactHeader = styled.div`
@@ -122,5 +131,34 @@ export const FormInput = styled.div`
 
     @media ${props => props.theme.breakpoints.sm} {
         
+    }
+`;
+
+export const ContactSuccess = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-weight: 400;
+        font-size: 55px;
+        padding-bottom: 20px;
+    }
+
+    p{
+        padding-bottom: 55px;
+    }
+
+    @keyframes show {
+        0%{
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 `;
