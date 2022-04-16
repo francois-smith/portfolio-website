@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactSection, ContactHeader, ContactContainer, ContactDetails, ContactType, ContactForm, FormMessage, FormButton,  InputType, FormInputsContainer, FormInput } from './contactStyles';
+import { ContactSuccess, ContactSection, ContactHeader, ContactContainer, ContactDetails, ContactType, ContactForm, FormMessage, FormButton,  InputType, FormInputsContainer, FormInput } from './contactStyles';
 
 const Contact = () => {
     function select(e){
@@ -22,15 +22,15 @@ const Contact = () => {
                 break;
 
             case"Email":
-            validateEmail(e.target);
+                validateEmail(e.target);
                 break;
 
             case"Number":
-            validateNumber(e.target);
+                validateNumber(e.target);
                 break;
 
             case"Message":
-            validateMessage(e.target);
+                validateMessage(e.target);
                 break;
         }
     }
@@ -40,9 +40,11 @@ const Contact = () => {
         let namePattern = /^[a-zA-Z]+(?:-[a-zA-Z]+)*$/;
         if(!namePattern.test(name)){
             e.parentElement.setAttribute('error-value', "Invalid name specified");
+            return false;
         }
         else{
             e.parentElement.setAttribute('error-value', "");
+            return true;
         }
     }
 
@@ -51,9 +53,11 @@ const Contact = () => {
         let emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(!emailPattern.test(email)){
             e.parentElement.setAttribute('error-value', "Invalid email specified");
+            return false;
         }
         else{
             e.parentElement.setAttribute('error-value', "");
+            return true;
         }
     }
 
@@ -62,9 +66,11 @@ const Contact = () => {
         let numberPattern = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
         if(!numberPattern.test(number)){
             e.parentElement.setAttribute('error-value', "Invalid number specified");
+            return false;
         }
         else{
             e.parentElement.setAttribute('error-value', "");
+            return true;
         }
     }
 
@@ -72,16 +78,46 @@ const Contact = () => {
         let message = e.value;
         if(message.length < 20){
             e.parentElement.setAttribute('error-value', "Message too short");
+            return false;
         }
         else{
             e.parentElement.setAttribute('error-value', "");
+            return true;
+        }
+    }
+
+    function submit(e){
+        e.preventDefault();
+        let name = document.getElementsByName("name")[0];
+        let email = document.getElementsByName("email")[0];
+        let number = document.getElementsByName("phone")[0];
+        let message = document.getElementsByName("message")[0];
+
+        validateName(name);
+        validateEmail(email);
+        validateNumber(number);
+        validateMessage(message);
+
+        if(validateName(name) && validateEmail(email) && validateNumber(number) && validateMessage(message)){
+            const request = new XMLHttpRequest();
+            request.open("POST", "https://francois-smith.com/form-validate.php");
+            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            document.getElementsByName("contact-form-container")[0].classList.add("success");
+            document.getElementsByName("contact-form-header")[0].classList.add("success");
+            document.getElementsByName("contact-form-success")[0].removeAttribute('id');
+            document.getElementsByName("contact-form-success")[0].style.animation="show 0.5s linear";
+            request.send("name="+name.value+"&email="+email.value+"&phone="+number.value+"&message="+message.value+"");
+        }
+        else{
+            e.preventDefault();
+            return false;
         }
     }
 
     return (
         <ContactSection id='ContactSection'> 
             <h2 class='Section_Heading'>CONTACT</h2>
-            <ContactHeader>
+            <ContactHeader name="contact-form-header">
                 <p id="GetInTouch"><span class='Text-Gradient'>GET IN TOUCH</span></p>
                 <p>Interested in working with me? Feel free to contact me.</p>
                 <svg className="GradientUnderline" width="531" height="16" viewBox="0 0 531 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +142,7 @@ const Contact = () => {
                     </defs>
                 </svg>
             </ContactHeader>
-            <ContactContainer>
+            <ContactContainer name="contact-form-container">
                 <ContactDetails>
                     <ContactType>
                         <address><a href="mailto:contact@francois-smith.com">contact@francois-smith.com</a></address>
@@ -151,28 +187,32 @@ const Contact = () => {
                         </svg>
                     </ContactType>
                 </ContactDetails>
-                <ContactForm method='post' action='/contactValidate.php'>
+                <ContactForm id="contact-form" onSubmit={(e) => submit(e)} method="POST">
                     <FormInputsContainer>
                         <FormInput>
-                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="text" name="name"></InputType>
+                            <InputType onBlur={(e) => unSelect(e)} onFocus={(e) => select(e)} type="text" name="name"></InputType>
                             <span>Name</span>
                         </FormInput>    
                         <FormInput>
-                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="email" name="email"></InputType>
+                            <InputType onBlur={(e) => unSelect(e)} onFocus={(e) => select(e)} type="email" name="email"></InputType>
                             <span>Email</span>
                         </FormInput>
                         <FormInput>
-                            <InputType onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" minlength="9" maxlength="14" name="phone"></InputType>
+                            <InputType onBlur={(e) => unSelect(e)} onFocus={(e) => select(e)} type="tel" name="phone"></InputType>
                             <span>Number</span>
                         </FormInput>                   
                     </FormInputsContainer>    
                     <FormInput id='Message'>
-                        <FormMessage onBlur={(e) => unSelect(e)} onClick={(e) => select(e)} maxlength="200" minlength="20"></FormMessage>
+                        <FormMessage onBlur={(e) => unSelect(e)} onFocus={(e) => select(e)} maxlength="400" minlength="20" name="message"></FormMessage>
                         <span>Message</span>
                     </FormInput>       
                     <FormButton type="submit" value='SUBMIT'></FormButton>  
                 </ContactForm>
             </ContactContainer>
+            <ContactSuccess name="contact-form-success" id="invisible">
+                <h2 class='Text-Gradient'>Email Recieved</h2>
+                <p>Thank you for contacting me! I will get back to you as soon as possible.</p>
+            </ContactSuccess>
         </ContactSection>
     );
 };
