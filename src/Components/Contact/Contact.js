@@ -107,6 +107,7 @@ const Contact = () => {
             document.getElementsByName("contact-form-success")[0].removeAttribute('id');
             document.getElementsByName("contact-form-success")[0].style.animation="show 0.5s linear";
             request.send("name="+name.value+"&email="+email.value+"&phone="+number.value+"&message="+message.value+"");
+            return true;
         }
         else{
             e.preventDefault();
@@ -187,7 +188,7 @@ const Contact = () => {
                         </svg>
                     </ContactType>
                 </ContactDetails>
-                <ContactForm id="contact-form" onSubmit={(e) => submit(e)} method="POST">
+                <ContactForm id="contact-form" onSubmit={(e) => submit(e)}>
                     <FormInputsContainer>
                         <FormInput>
                             <InputType onBlur={(e) => unSelect(e)} onFocus={(e) => select(e)} type="text" name="name"></InputType>
