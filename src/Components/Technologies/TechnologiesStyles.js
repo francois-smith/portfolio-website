@@ -7,6 +7,7 @@ export const TechnologiesSection = styled.div`
     .TechName{
         font-family: ${props => props.theme.fonts.main};
         font-size: 20px;
+        pointer-events: none;
     }
 
 `;
@@ -18,6 +19,7 @@ export const TechSectionHeader = styled.p`
     font-weight: bolder;
     padding-top: 35px;
     opacity: 60%;
+    pointer-events: none;
 `;
 
 export const TechSection = styled.div`
@@ -37,6 +39,7 @@ export const TechCard = styled.div`
     padding-right: 45px;
     padding-left: 45px;
     transition: all 0.2s;
+    
 
     svg {
         transform: scale(0.75);
@@ -52,6 +55,6 @@ export const TechCard = styled.div`
     }
 
     &:hover{
-        transform: translateY(10px);
+        transform: translateY(-10px);
     }
 `;

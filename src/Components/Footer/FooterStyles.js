@@ -15,6 +15,10 @@ export const FooterSection = styled.div`
         font-size: 18px;
         padding: 25px
     }
+
+    #legal{
+        pointer-events: none;
+    }
 `;
 
 export const FooterSocials = styled.div`

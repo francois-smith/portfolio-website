@@ -39,6 +39,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: 40px;
         line-height: 128%;
         letter-spacing: 0.22em;
+        pointer-events: none;
 
         &::before {
             content: "";

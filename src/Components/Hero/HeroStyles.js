@@ -48,6 +48,7 @@ export const Dev = keyframes`
 export const HeroSection = styled.div`
     height: 800px;
     position: relative;
+    pointer-events: none;
 
     svg {
         position: absolute;

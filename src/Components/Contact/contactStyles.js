@@ -24,6 +24,7 @@ export const ContactHeader = styled.div`
         font-size: 30px;   
         padding-bottom: 10px
     }
+    pointer-events: none;
 `;
 
 export const ContactContainer = styled.div`
@@ -161,4 +162,6 @@ export const ContactSuccess = styled.div`
             transform: translateY(0px);
         }
     }
+
+    pointer-events: none;
 `;
