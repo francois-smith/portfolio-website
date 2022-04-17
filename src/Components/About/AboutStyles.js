@@ -12,6 +12,7 @@ export const AboutParagraph = styled.p`
     width: 55%;
     margin: auto;
     text-align: center;
+    pointer-events: none;
 `;
 
 export const AboutCards = styled.div`
@@ -35,12 +36,14 @@ export const AboutCardTitle = styled.div`
     display: flex;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    pointer-events: none;
 
     h3{
         letter-spacing: 0.15em;
         font-size: 28px;
         font-weight: 600;
-        transform: translateX(-20px);
+        transform: translateX(35px);
+        position: absolute;
     }
     img{
         background-blend-mode: luminosity;
@@ -54,4 +57,5 @@ export const AboutCardDescription = styled.p`
     font-size: 18px;
     padding-left: 40px;
     padding-top: 10px;
+    pointer-events: none;
 `;
