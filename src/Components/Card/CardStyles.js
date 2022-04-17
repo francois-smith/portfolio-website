@@ -48,6 +48,7 @@ export const CardsContainer = styled.div`
         font-weight: normal;
         font-size: 22px;
         z-index: 1;
+        pointer-events: none;
     }
        
     .Card_Description {
@@ -59,6 +60,7 @@ export const CardsContainer = styled.div`
         opacity: 0%;
         transform: translateY(150px);
         transition: all 500ms;
+        pointer-events: none;
     }
     
     .Card:hover .Card_Description{
@@ -77,11 +79,6 @@ export const CardsContainer = styled.div`
     }
 
     .Btn {
-        position: absolute;
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: inline-block;
         padding: 2px;
         background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
         border-radius: 20px;
@@ -108,5 +105,18 @@ export const CardsContainer = styled.div`
         color: white;
     }
     
+    .hidden{
+        display: none;
+    }
+
+    .Card_Body .Buttons{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
 `;
 
