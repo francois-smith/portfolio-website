@@ -25,17 +25,34 @@ export const ContactHeader = styled.div`
         padding-bottom: 10px
     }
     pointer-events: none;
+
+    @media ${props => props.theme.breakpoints.sm}{
+        padding-top: 20px;
+
+        p {
+            padding: 0px 40px 10px;
+        }
+    }
 `;
 
 export const ContactContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 60px;
+
+    @media ${props => props.theme.breakpoints.xl}{
+        flex-direction: column;
+        margin-top: 30px;
+    }
 `;
 
 export const ContactDetails = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media ${props => props.theme.breakpoints.md}{
+        margin-bottom: 30px;
+    }
 `;
 
 export const ContactType = styled.div`
@@ -53,6 +70,18 @@ export const ContactType = styled.div`
         margin-left: 10px;
         margin-bottom: 60px;
     }
+
+    @media ${props => props.theme.breakpoints.xl}{
+        justify-content: center;
+
+        *{
+            margin-bottom: 20px;
+        }
+
+        svg{
+            display: none;
+        }
+    }
 `;
 
 export const ContactForm = styled.form`
@@ -61,6 +90,28 @@ export const ContactForm = styled.form`
 
     #Message span {
         margin-top: 70px;
+    }
+
+    @media ${props => props.theme.breakpoints.xl}{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 0px;
+        align-items: center;
+
+        #Message span {
+            margin-top: 0px;
+        }
+
+        #Message::after{
+            top: 80%;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.xl}{
+        #Message span {
+            margin-top: 20px;
+        }
     }
 `;
 
@@ -75,6 +126,19 @@ export const InputType = styled.input`
     color: ${props => props.theme.colors.text};
     font-weight: 300;
     z-index: 1;
+
+    @media ${props => props.theme.breakpoints.xl}{
+        margin-bottom: 35px;
+        width: 200%;
+    }
+
+    @media ${props => props.theme.breakpoints.xl}{
+        margin-bottom: 45px;
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        width: 100%;
+    }
 `;
 
 export const FormMessage = styled.textarea`
@@ -88,6 +152,18 @@ export const FormMessage = styled.textarea`
     color: ${props => props.theme.colors.text};
     z-index: 1;
     font-weight: 300;
+
+    @media ${props => props.theme.breakpoints.xl}{
+        margin-top: 0px;
+    }
+
+    @media ${props => props.theme.breakpoints.xl}{
+        margin-top: 20px;
+    }
+
+    span{
+        margin-top: 2px;
+    }
 `;
 
 export const FormButton = styled.input`
@@ -104,10 +180,33 @@ export const FormButton = styled.input`
     &:hover{
         filter: brightness(0.8);
     }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        margin-top: 20px;
+        margin-bottom: 35px;
+    }
 `;
 
 export const FormInputsContainer = styled.div`
     display: flex;
+
+    @media ${props => props.theme.breakpoints.xl}{
+        flex-direction: column;
+        width: 50%;
+    }
+
+    @media ${props => props.theme.breakpoints.lg} {
+        width: 70%;
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        width: 110%;
+        padding-left: 20%;
+    }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        padding-left: 10%;
+    }
 `;
 
 export const FormInput = styled.div`
@@ -118,7 +217,6 @@ export const FormInput = styled.div`
         z-index: 0;
         left: 0;
         transition: all 0.15s;
-
     }
 
     &:after{
@@ -130,8 +228,28 @@ export const FormInput = styled.div`
         font-size: 18px;
     }
 
-    @media ${props => props.theme.breakpoints.sm} {
-        
+    @media ${props => props.theme.breakpoints.xl}{
+        width: 50%;
+        padding-bottom: 20px;
+
+        &:after{
+            top: 45%;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        span {
+            bottom: 75%;
+        }
+
+        &:after{
+            top: 40%;
+        }
+        width: 80%;
+    }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        width: 90%;
     }
 `;
 
@@ -160,6 +278,35 @@ export const ContactSuccess = styled.div`
         100%{
             opacity: 1;
             transform: translateY(0px);
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.md}{
+        p{
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        h2{
+            font-size: 40px;
+            padding-bottom: 20px;
+        }
+
+        p{
+            font-size: 18px;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        h2{
+            font-size: 32px;
+            padding-bottom: 20px;
+        }
+
+        p{
+            font-size: 16px;
         }
     }
 

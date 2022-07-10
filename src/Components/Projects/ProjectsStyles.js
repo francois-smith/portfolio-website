@@ -10,5 +10,9 @@ export const ProjectSection = styled.div`
         padding-bottom: 40px;
         padding-top: 20px;
     }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        font-size: 16px;
+    }
 `;
 

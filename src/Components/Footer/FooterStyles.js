@@ -19,6 +19,12 @@ export const FooterSection = styled.div`
     #legal{
         pointer-events: none;
     }
+
+    @media ${props => props.theme.breakpoints.md}{
+        #legal {
+            font-size: 16px;
+        }
+    }
 `;
 
 export const FooterSocials = styled.div`
@@ -32,7 +38,7 @@ export const FooterSocials = styled.div`
 
     .svg_icon:hover{
         color: ${props => props.theme.colors.primary};
-    }
+    }  
 `;
 
 export const FooterToTop = styled.div`
@@ -56,5 +62,16 @@ export const FooterToTop = styled.div`
 
     a:hover svg{
         transform: translateY(-10px);
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        svg {
+            transform: scale(0.8);
+            margin-top: -20px;
+        }
+
+        p {
+            padding-top: 8px;
+        }
     }
 `;

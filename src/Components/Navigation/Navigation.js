@@ -1,11 +1,39 @@
 import React from 'react';
 import logo from '../../Media/Images/Logo-Main.png'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import {Link, NavigationContainer, NavigationLinks, NavigationSocials, Social} from './NavigationStyles'
+import { Navigation, Link, NavigationContainer, NavigationLinks, NavigationSocials, Social, BurgerIcon, Container} from './NavigationStyles'
+import {slide as Menu} from 'react-burger-menu'
+
+class Burger extends React.Component {
+    showSettings (event) {
+      event.preventDefault();
+    }
+    render () {
+        return (
+            <Menu right>
+                <a className="menu-item" href="ProjectsSection">Projects</a>
+                <a className="menu-item" href="TechnologiesSection">Technologies</a>
+                <a className="menu-item" href="AboutSection">About</a>
+                <a className="menu-item" href="ContactSection">Contact</a>
+                <div id="side-bar-socials">
+                    <a href='https://github.com/francois-smith'>
+                        <AiFillGithub className='svg_icon'></AiFillGithub>
+                    </a>
+                    <a href='https://instagram.com/_francois.smith_'>
+                        <AiFillInstagram className='svg_icon'></AiFillInstagram>              
+                    </a>
+                    <a href='https://www.linkedin.com/in/francois-smith-b02609210/'>
+                        <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
+                    </a>
+                </div>
+            </Menu>
+        );
+    }
+}
 
 const Header = () => {
     return (
-        <nav>
+        <Navigation>
             <NavigationContainer id="PageTop">
                 <NavigationLinks>
                     <a href='/'><img src={logo} alt="Main Logo"/></a>
@@ -45,7 +73,8 @@ const Header = () => {
                     </Social>
                 </NavigationSocials>
             </NavigationContainer>
-        </nav>
+            <Burger id="burgerMenu"></Burger>
+        </Navigation>
     );
 };
 

@@ -118,5 +118,122 @@ export const CardsContainer = styled.div`
         justify-content: space-around;
         width: 80%;
     }
+
+    @media ${props => props.theme.breakpoints.md}{
+        .Card{
+            height: 500px;
+        }
+
+        .Card_Body {
+            height: 500px;
+            background-color: ${props => props.theme.colors.background2};
+        }
+        
+        .Card_Description {
+            opacity: 1;
+            transform: translateY(200px);
+        }
+
+        .Card:hover .Card_Description{
+            transform: translateY(200px);
+        }
+
+        .Card_Image{
+            height: 320px;
+        }
+
+        .Btn {
+            opacity: 1;
+            &:hover{
+                filter: brightness(0.8);
+            }
+        }
+
+        .Card:hover .Card_Image {
+            filter: brightness(1);
+        }
+
+        .Card:hover .Card_Description {
+            transform: translateY(200px);
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        .Card{
+            width: 90%;
+            height: 400px;
+        }
+
+        .Card_Body {
+            width: 100%;
+            height: 400px;
+            background-color: ${props => props.theme.colors.background2};
+        }
+        
+        .Card_Description {
+            opacity: 1;
+            transform: translateY(120px);
+        }
+
+        .Card:hover .Card_Description{
+            transform: translateY(120px);
+        }
+
+        .Card_Image{
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+        }
+
+        .Card_Type {
+            padding-top: 15px;
+            font-size: 20px;
+        }
+
+        .Card_Body .Buttons{
+            width: 90%;
+        }
+
+        .Card_Body .Buttons{
+            bottom: 30px;
+        }
+
+        .Btn > span {
+            padding: 0 8px;
+            height: 40px;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        .Card{
+            width: 90%;
+            height: 350px;
+        }
+
+        .Card_Body {
+            width: 100%;
+            height: 350px;
+            background-color: ${props => props.theme.colors.background2};
+        }
+
+        .Card_Description{
+            width: 90%;
+            transform: translateY(75px);
+        }
+
+        .Card:hover .Card_Description{
+            transform: translateY(75px);
+        }
+
+        .Card_Body .Buttons{
+            width: 95%;
+        }
+
+        .Btn > span {
+            padding: 0 8px;
+            height: 40px;
+            font-size: 18px;
+        }
+    }
 `;
 

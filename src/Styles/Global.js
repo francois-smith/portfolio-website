@@ -15,10 +15,11 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
         overflow-x: hidden;
         position: absolute;
-        width: 100%;
+        width: 100vw;
     }
 
     body {
+        width: 100vw;
         background-color: ${props => props.theme.colors.background2};
         min-height: 100vh;
         color: ${props => props.theme.colors.text};
@@ -26,11 +27,13 @@ const GlobalStyles = createGlobalStyle`
         font-family:  ${props => props.theme.fonts.main};
         font-weight: regular;
     }
+
     .Text-Gradient {
         background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
     .Section_Heading {
         padding-bottom: 50px;
         padding-left: 125px;
@@ -51,13 +54,39 @@ const GlobalStyles = createGlobalStyle`
             border-radius: 5px;
             z-index: 1;
         }
+
+        @media ${props => props.theme.breakpoints.xxl}{
+            padding-bottom: 40px;
+            padding-left: 100px;
+            padding-top: 40px;
+            font-size: 35px;
+        }
+
+        @media ${props => props.theme.breakpoints.md}{
+            padding-bottom: 25px;
+            padding-left: 50px;
+            padding-top: 25px;
+            font-size: 28px;
+        }
+
+        @media ${props => props.theme.breakpoints.md}{
+            padding-left: 25px;
+        }
+
+        @media ${props => props.theme.breakpoints.xs}{
+            font-size: 25px;
+        }
     }
     .GradientUnderline{
         margin-top: 40px;
         display: block;
-        margin-left:auto;
-        margin-right:auto;
-    }
+        margin-left: auto;
+        margin-right: auto;
+
+        @media ${props => props.theme.breakpoints.sm}{
+            width: 80%;
+        }
+    } 
 `;
 
 export default GlobalStyles;

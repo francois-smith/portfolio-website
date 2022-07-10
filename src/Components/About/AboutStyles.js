@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const AboutSection = styled.div`
     background-color:  ${props => props.theme.colors.background1};
     height: auto;
@@ -13,6 +12,14 @@ export const AboutParagraph = styled.p`
     margin: auto;
     text-align: center;
     pointer-events: none;
+
+    @media ${props => props.theme.breakpoints.lg} {
+        width: 80%;
+    }
+
+    @media ${props => props.theme.breakpoints.md}{
+        font-size: 17px;
+    }
 `;
 
 export const AboutCards = styled.div`
@@ -30,6 +37,11 @@ export const AboutCard = styled.div`
     &:hover div{
         transform: translateY(-10px);
     }
+
+    @media ${props => props.theme.breakpoints.lg} {
+        flex-basis: 80%;
+    }
+
 `;
 
 export const AboutCardTitle = styled.div`
@@ -49,6 +61,20 @@ export const AboutCardTitle = styled.div`
         background-blend-mode: luminosity;
         transition: all 0.3s;
     }
+
+    @media ${props => props.theme.breakpoints.sm}{
+        justify-content: center;
+
+        h3{
+            text-align: center;
+            transform: translateX(0px);
+        }
+
+        img{
+            margin-left: -10px;
+            margin-bottom: 10px;
+        }
+    }
 `;
 
 
@@ -58,4 +84,9 @@ export const AboutCardDescription = styled.p`
     padding-left: 40px;
     padding-top: 10px;
     pointer-events: none;
+
+    @media ${props => props.theme.breakpoints.sm}{
+        text-align: center;
+        padding: 10px 0px;
+    }
 `;
