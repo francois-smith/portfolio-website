@@ -32,7 +32,7 @@ export default createGlobalStyle<{theme: ThemeClass}>`
     .Text-Gradient {
         background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent; 
     }
 
     .Section_Heading {
@@ -74,8 +74,12 @@ export default createGlobalStyle<{theme: ThemeClass}>`
             padding-left: 25px;
         }
 
-        @media ${props => props.theme.breakpoints.xs}{
+        @media ${props => props.theme.breakpoints.sm}{
             font-size: 25px;
+        }
+
+        @media ${props => props.theme.breakpoints.xs}{
+            font-size: 22px;
         }
     }
     .GradientUnderline{
