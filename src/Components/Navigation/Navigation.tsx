@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 import { Navigation, Link, NavigationContainer, NavigationLinks, NavigationSocials, Social} from './NavigationStyles'
+import Burger from "./BurgerMenu";
 
 const Header: React.FC = () => {
     return (
@@ -44,6 +45,7 @@ const Header: React.FC = () => {
                     </Social>
                 </NavigationSocials>
             </NavigationContainer>
+            <Burger/>
         </Navigation>
     );
 };
