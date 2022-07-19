@@ -1,7 +1,7 @@
 import React from 'react';
 import { Animation } from './BackgroundAnimationStyles';
 
-const BackgroundAnimation = () => (
+const BackgroundAnimation: React.FC = () => (
   <Animation>
     <svg
       className="BgAnimation__svg"

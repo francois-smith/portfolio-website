@@ -1,10 +1,8 @@
 import React from 'react';
 import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
-import PersonalImage from '../../Media/Images/Hero.png';
 import { HeroSection, HeroInfo, HeroImage} from './HeroStyles';
-import CV from '../../Media/pdf/Francois-Smith-CV.pdf'
 
-const Hero = () => {
+const Hero: React.FC = () => {
     return (
        <HeroSection>
            <HeroInfo>
@@ -12,12 +10,12 @@ const Hero = () => {
                     <span>Hi, my name is</span>
                 </p>
                 <p id='Name'>
-                    <span class='Text-Gradient'>Francois Smith</span>
+                    <span className='Text-Gradient'>Francois Smith</span>
                 </p>
                 <p id='Dev'>
                     <span>Web Developer / UI Designer</span>
                 </p>
-                <a href={CV} id="CV" target="_blank">
+                <a href="/Media/CV/Francois-Smith-CV.pdf" id="CV" target="_blank">
                     View CV
                 </a>
            </HeroInfo>
@@ -31,7 +29,7 @@ const Hero = () => {
                 </defs>
             </svg>
            <BackgroundAnimation/>
-           <HeroImage src={PersonalImage}/>
+           <HeroImage src="/Media/Images/Hero.png"/>
        </HeroSection >
     ); 
 };

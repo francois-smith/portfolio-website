@@ -2,7 +2,7 @@ import React from 'react'
 import { FooterSection, FooterSocials, FooterToTop } from './FooterStyles'
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
 
-const Footer = () => {
+const Footer: React.FC = () => {
     const today = new Date();
 
     return (
