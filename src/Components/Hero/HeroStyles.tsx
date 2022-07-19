@@ -152,19 +152,33 @@ export const HeroInfo = styled.div`
 
     #CV{
         opacity: 0;
-        display: inline;
-        background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
-        border: none;
-        padding: 7px 14px;
         font-size: 25px;
-        border-radius: 10px;
-        margin-left: 2px;
         animation: ${CV} 0.9s linear 0.8s forwards;
         text-decoration: none;
-        color: ${props => props.theme.colors.text};
-        z-index: 1000;
         position: relative;
         z-index: 100;
+    }
+
+    .cv-button {
+        width: 175px;
+        background-image: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
+        padding: 2px !important;
+        border-radius: 6px;
+        transition: all 0.25s;
+        animation: ${CV} 0.9s linear 0.8s forwards;
+        transform: translateY(120px);
+        margin-left: 5px;
+
+        &:hover{
+            filter: opacity(0.3);
+        }
+
+        div {
+            padding: 5px;
+            border-radius: 6px;
+            text-align: center;
+            background: ${props => props.theme.colors.background2} !important;
+        }
     }
 
     @media ${props => props.theme.breakpoints.xxl} {
@@ -182,6 +196,9 @@ export const HeroInfo = styled.div`
 
         #Dev {
             font-size: 22px;
+        }
+        .cv-button {
+            width: 150px;
         }
     }
 
@@ -201,6 +218,10 @@ export const HeroInfo = styled.div`
             font-size: 20px;
             padding-top: 10px;
         }
+
+        #CV{
+            display: none;
+        }
     }
     
     @media ${props => props.theme.breakpoints.md} {
@@ -212,9 +233,18 @@ export const HeroInfo = styled.div`
         padding-left: 40px;
         padding-top: 100px;
 
-        #CV{
-            padding: 6px 12px;
-            font-size: 22px;
+        #Welcome {
+            font-size: 24px;
+            padding-bottom: 25px;
+        } 
+
+        #Name {
+            font-size: 38px;
+        } 
+
+        #Dev {
+            font-size: 16px;
+            padding-top: 10px;
         }
     }
 
@@ -224,22 +254,17 @@ export const HeroInfo = styled.div`
         margin-right: auto;
 
         #Welcome {
-            font-size: 25px;
+            font-size: 22px;
             padding-bottom: 25px;
         } 
 
         #Name {
-            font-size: 40px;
+            font-size: 35px;
         } 
 
         #Dev {
-            font-size: 16px;
+            font-size: 14px;
             padding-top: 10px;
-        }
-
-        #CV{
-            padding: 6px 12px;
-            font-size: 18px;
         }
     }
 `;
