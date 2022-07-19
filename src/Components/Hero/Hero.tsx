@@ -16,7 +16,11 @@ const Hero: React.FC = () => {
                     <span>Web Developer / UI Designer</span>
                 </p>
                 <a href="/Media/CV/Francois-Smith-CV.pdf" id="CV" target="_blank">
-                    View CV
+                    <div className="cv-button">
+                        <div>
+                            <span className="Text-Gradient">View CV</span>
+                        </div>
+                    </div>
                 </a>
            </HeroInfo>
             <svg id='folder' width="523" height="350" viewBox="0 0 523 350" fill="none" xmlns="http://www.w3.org/2000/svg">
