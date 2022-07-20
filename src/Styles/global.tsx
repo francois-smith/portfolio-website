@@ -47,11 +47,11 @@ export default createGlobalStyle<{theme: ThemeClass}>`
 
         &::before {
             content: "";
-            margin-bottom: 15px;
+            margin-bottom: 5px;
             float: left;
             background: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
-            width: 35%;
-            height: 8px;
+            width: 50%;
+            height: 4px;
             border-radius: 5px;
             z-index: 1;
         }
