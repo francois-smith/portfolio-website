@@ -79,6 +79,8 @@ export const Navigation = styled.nav`
         .bm-burger-button {
             display: block;
         }
+
+        width: 0px;
     }
 `;
 
@@ -122,6 +124,8 @@ export const NavigationContainer = styled.div`
 
     @media ${props => props.theme.breakpoints.xl} {
         display: none;
+
+        width: 0vw;
     }
 `;
 
