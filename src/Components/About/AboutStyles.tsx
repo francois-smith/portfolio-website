@@ -3,12 +3,22 @@ import styled from "styled-components";
 export const AboutSection = styled.div`
     background-color:  ${props => props.theme.colors.background1};
     height: auto;
+
+    .about-divider{
+        padding: 20px 0px 15px;
+        display: flex;
+        justify-content: center;
+
+        img{
+            width: 300px;
+        }
+    }
 `;
 
 export const AboutParagraph = styled.p`
     padding-top: 20px;
     font-size: 20px;
-    width: 55%;
+    width: 60%;
     margin: auto;
     text-align: center;
     pointer-events: none;
@@ -32,7 +42,6 @@ export const AboutCards = styled.div`
 export const AboutCard = styled.div`
     flex-basis: 35%;
     margin: 25px;
-    transition: all 10s;
 
     &:hover div{
         transform: translateY(-10px);
