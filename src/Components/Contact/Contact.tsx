@@ -1,5 +1,6 @@
 import React from 'react';
-import {ContactSection} from './contactStyles';
+import { ContactSection, ContactHeader, ContactForm } from './contactStyles';
+import { Button, TextField } from '@mui/material';
 
 const Contact: React.FC = () => {
     function select(e: any){
@@ -93,13 +94,23 @@ const Contact: React.FC = () => {
 
     return (
         <ContactSection id='ContactSection'> 
-            <form onSubmit={submit}>
-                <input type="text" id="name"/>
-                <input type="text" id="email"/>
-                <input type="text" id="phone"/>
-                <textarea id="message" cols={30} rows={10}/>
-                <input type="submit"/>
-            </form>
+            <h2 className='Section_Heading'>CONTACT</h2>
+            <ContactHeader>
+                <p id="GetInTouch"><span className='Text-Gradient'>GET IN TOUCH</span></p>
+                <p>Interested in working with me? Feel free to contact me.</p>
+                <div className="contact-divider">
+                    <img src="/Media/SVG/divider.svg" alt=""/>
+                </div>
+            </ContactHeader>
+            <ContactForm>
+                <form onSubmit={submit}>
+                    <input type="text" id="name"/>
+                    <input type="text" id="email"/>
+                    <input type="text" id="phone"/>
+                    <textarea id="message" cols={30} rows={10}/>
+                    <input type="submit"/>
+                </form>
+            </ContactForm>
         </ContactSection>
     );
 };
