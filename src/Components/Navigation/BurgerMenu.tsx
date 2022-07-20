@@ -37,11 +37,13 @@ class Burger extends React.Component<{}, {menuOpen: false}> {
                         <AiFillLinkedin className='svg_icon'></AiFillLinkedin>
                     </a>
                 </div>
-                <div className="bm-cv-button">
-                    <div>
-                        <span className="Text-Gradient">View CV</span>
-                    </div>
-                </div>
+				<a href="/Media/CV/Francois-Smith-CV.pdf" id="CV" target="_blank">
+					<div className="bm-cv-button">
+						<div>
+							<span className="Text-Gradient">View CV</span>
+						</div>
+					</div>
+				</a>
 	  		</Menu>
 		);
   	}
