@@ -20,6 +20,7 @@ export default createGlobalStyle<{theme: ThemeClass}>`
     }
 
     body {
+        overflow-x: hidden;
         width: 100vw;
         background-color: ${props => props.theme.colors.background2};
         min-height: 100vh;
