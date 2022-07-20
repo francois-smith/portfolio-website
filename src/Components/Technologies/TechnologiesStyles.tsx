@@ -97,6 +97,7 @@ export const TechCard = styled.div`
     @media ${props => props.theme.breakpoints.sm}{
         padding-right: 20px;
         padding-left: 20px;
+        flex: 1 0 49%;
 
         img{
             height: 50px;
