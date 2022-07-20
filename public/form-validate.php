@@ -89,7 +89,7 @@
                                                                 <table class="image_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                     <tr>
                                                                         <td style="padding-top:5px;width:100%;padding-right:0px;padding-left:0px;">
-                                                                            <div align="center" style="line-height:10px"><img src="https://francois-smith.com/static/media/Logo-Main.741e7cd2e5332aad5426.png" style="display: block; height: auto; border: 0; width: 140px; max-width: 100%;" width="140"></div>
+                                                                            <div align="center" style="line-height:10px"><img src="https://francois-smith.com/Media/Images/Logo-Main.png" style="display: block; height: auto; border: 0; width: 140px; max-width: 100%;" width="140"></div>
                                                                         </td>
                                                                     </tr>
                                                                 </table>
@@ -266,7 +266,7 @@
                                                                     <table class="image_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                         <tr>
                                                                             <td style="width:100%;padding-top:5px;padding-right:0px;padding-left:0px;">
-                                                                                <div align="center" style="line-height:10px"><img src="https://francois-smith.com/static/media/Logo-Main.741e7cd2e5332aad5426.png" style="display: block; height: auto; border: 0; width: 140px; max-width: 100%;" width="140"></div>
+                                                                                <div align="center" style="line-height:10px"><img src="https://francois-smith.com/Media/Images/Logo-Main.png" style="display: block; height: auto; border: 0; width: 140px; max-width: 100%;" width="140"></div>
                                                                             </td>
                                                                         </tr>
                                                                     </table>
