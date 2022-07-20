@@ -6,9 +6,9 @@ const projects = [
     {
         type: "Designed & Coded",
         title: "Portfolio Website",
-        description: "The website you are currently viewing! Built to showcase my work and to get in contact with me. ",
+        description: "The website you are currently viewing! Built to showcase my work and to get in contact with me. All the code is open source and free to use to your heart's content. Includes an email autoresponder system built with PHP.",
         tags: [
-            "Styled Components", "React", "Typescript", "React Icons"
+            "Styled Components", "React", "Typescript", "React Icons", "PHP"
         ],
         github_link: "https://github.com/francois-smith/portfolio-website",
         link: "https://francois-smith.com",
@@ -20,9 +20,9 @@ const projects = [
     {
         type: "Designed & Coded",
         title: "M Photography",
-        description: "Portfolio and showcase website for a local photographer. Main features include a responsive mosaic photo gallery used to showcase her work.",
+        description: "Portfolio and Showcase website for a local photographer. Main features include a responsive mosaic photo gallery used to showcase her work. Photos are stored on a server with API calls to fetch dynamic data dependant on the section you are viewing.",
         tags: [
-            "Styled Components", "React", "React Router", "React Icons"
+            "Styled Components", "React", "React Router", "React Icons", "PHP"
         ],
         github_link: "https://github.com/francois-smith/M-Photography",
         "link": "https://maryna-m-photography.com",
@@ -34,9 +34,9 @@ const projects = [
     {
         type: "Designed",
         title: "Moonrealm Productions",
-        description: "Group project I did in my first year of university. The module required us to create a website for a game studio, this was my group's submission.",
+        description: "A group project I did in my first year of university. The module required us to create a website for a game studio, this was my group's submission. Built using vanilla HTML5, CSS3 and JS.",
         tags: [
-            "CSS3", "Javascript", "University Project", "HTML"
+            "CSS3", "Javascript", "University Project", "HTML5"
         ],
         github_link: "https://github.com/Multimedia-Overachievers/INL120",
         "link": "https://inl-120.netlify.app/",
@@ -64,9 +64,9 @@ const Projects: React.FC = () => {
                                     <p>{project.description}</p>
                                 </div>
                                 <div className='project-tags'>
-                                    {project.tags.map(tag =>{
+                                    {project.tags.map((tag, key) =>{
                                         return (
-                                            <span className='project-tag'>{tag}</span>
+                                            <span key={key} className='project-tag'>{tag}</span>
                                         );
                                     })}
                                 </div>
