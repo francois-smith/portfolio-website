@@ -21,6 +21,7 @@ class Burger extends React.Component<{}, {menuOpen: false}> {
   	render () {
 		return (
 	  		<Menu isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)} right customBurgerIcon={<img src="/Media/SVG/burger-icon.svg" alt="Burger Icon" /> }>
+				<a href='/' className="menu-logo"><img src="/Media/Images/Logo-Main.png" alt="Main Logo"/></a>
 				<a onClick={() => this.closeMenu()} className="menu-item" href="#ProjectsSection">Project</a>
 				<a onClick={() => this.closeMenu()} className="menu-item" href="#TechnologiesSection">Technologies</a>
 				<a onClick={() => this.closeMenu()} className="menu-item" href="#AboutSection">About</a>

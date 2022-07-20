@@ -3,6 +3,11 @@ import styled, { keyframes} from "styled-components";
 export const Navigation = styled.nav`
     width: 100vw;
 
+    .menu-logo{
+        img{
+            height: 50px;
+        }
+    }
     .bm-cv-button {
         background-image: linear-gradient(to right, ${props => props.theme.colors.accent}, ${props => props.theme.colors.primary});
         padding: 2px !important;
