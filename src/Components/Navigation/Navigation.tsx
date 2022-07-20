@@ -5,8 +5,8 @@ import Burger from "./BurgerMenu";
 
 const Header: React.FC = () => {
     return (
-        <Navigation>
-            <NavigationContainer id="PageTop">
+        <Navigation id="PageTop">
+            <NavigationContainer>
                 <NavigationLinks>
                     <a href='/'><img src="/Media/Images/Logo-Main.png" alt="Main Logo"/></a>
                     <li className="first">
