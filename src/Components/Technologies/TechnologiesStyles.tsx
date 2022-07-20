@@ -22,7 +22,7 @@ export const TechSectionHeader = styled.p`
     text-align: center;
     font-size: 30px;
     font-weight: bolder;
-    padding-top: 35px;
+    padding-bottom: 10px;
     opacity: 60%;
     pointer-events: none;
 
@@ -41,10 +41,14 @@ export const TechSectionHeader = styled.p`
     @media ${props => props.theme.breakpoints.sm}{
         font-size: 22px;
     }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        font-size: 18px;
+    }
 `;
 
 export const TechSection = styled.div`
-    padding-bottom: 40px;
+    padding-bottom: 75px;
     position: relative;
 `;
 
@@ -53,7 +57,7 @@ export const TechCardsContainer = styled.div`
     justify-content: center;
     padding-top: 10px;
 
-    @media ${props => props.theme.breakpoints.sm}{
+    @media ${props => props.theme.breakpoints.lg}{
         flex-wrap: wrap;
     }
 `;
@@ -62,45 +66,44 @@ export const TechCard = styled.div`
     text-align: center;
     padding-right: 45px;
     padding-left: 45px;
-    transition: all 0.2s;
+    transition: all 0.25s;
     
-    svg {
-        transform: scale(0.75);
+    img {
+        height: 75px;
         margin-left: 20px;
         margin-right: 20px;
-        transition: all 0.4s;
-    }
-    img {
-        transform: scale(0.75);
-        padding-left: 20px;
-        padding-right: 20px;
-        transition: all 0.2s;
+        margin-bottom: 10px;
     }
 
     &:hover{
         transform: translateY(-10px);
     }
 
-    @media ${props => props.theme.breakpoints.md}{
+    @media ${props => props.theme.breakpoints.xl}{
         padding-right: 30px;
         padding-left: 30px;
+    }
 
-        svg {
-            transform: scale(0.5);
-            padding: 0px;
-            margin: 0px;
-        }
-        img {
-            transform: scale(0.5);
-            padding: 0px;
-            margin: 0px;
-        }
+    @media ${props => props.theme.breakpoints.lg}{
+        flex: 1 0 30%;
+        padding-top: 25px;
+    }
+
+    @media ${props => props.theme.breakpoints.md}{
+        padding-right: 25px;
+        padding-left: 25px;
     }
 
     @media ${props => props.theme.breakpoints.sm}{
-        padding-right: 25px;
-        padding-left: 25px;
-        flex-basis: 35%;
-        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        img{
+            height: 50px;
+        }
+    }
+
+    @media ${props => props.theme.breakpoints.xs}{
+        flex: 1 0 51%;
     }
 `;
