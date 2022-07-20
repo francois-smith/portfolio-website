@@ -27,6 +27,7 @@ export const Navigation = styled.nav`
         height: 40px;
         right: 25px;
         top: 25px;
+        transition: all 0.25s;
     }
     .bm-cross-button {
         height: 40px;
@@ -49,7 +50,7 @@ export const Navigation = styled.nav`
         background: ${props => props.theme.colors.background1};
         padding: 2.5em 1.5em 0;
         font-size: 1.15em;
-
+    
         svg{
             transform: scale(1.4);
             color: ${props => props.theme.colors.text};
