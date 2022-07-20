@@ -165,10 +165,16 @@ export const Project = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.md}{
-        margin-bottom: 60px;
+        margin-bottom: 40px;
 
         border-radius: 4px;
         background-color:  ${props => props.theme.colors.background2};
+
+        &:hover{
+            .project-header{
+                transform: translateY(0px);
+            }
+        }
 
         .project-content{
             padding: 25px;
@@ -197,7 +203,7 @@ export const Project = styled.div`
     }
 
     @media ${props => props.theme.breakpoints.sm}{
-        margin-bottom: 40px;
+        margin-bottom: 20px;
 
         .project-content{
             padding: 15px;
